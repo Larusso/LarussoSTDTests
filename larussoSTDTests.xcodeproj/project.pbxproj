@@ -206,7 +206,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "../LarussoSTD/LarussoSTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "../LarussoSTD-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -216,7 +216,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "../LarussoSTD/**";
+				HEADER_SEARCH_PATHS = "../Classes/**";
 				INFOPLIST_FILE = "LarussoCocoaSTDLib-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -250,12 +250,12 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "../LarussoSTD/LarussoSTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "../LarussoSTD-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "../LarussoSTD/**";
+				HEADER_SEARCH_PATHS = "../Classes/**";
 				INFOPLIST_FILE = "LarussoCocoaSTDLib-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
