@@ -15,12 +15,6 @@
 - (void)setUp
 {
     [super setUp];
-
-    NSBundle *unitTestBundle = [NSBundle bundleForClass:[self class]];
-    NSString *filePath = [unitTestBundle pathForResource:@"image_40_50" ofType:@"png"];
-    NSData *imageData = [NSData dataWithContentsOfFile:filePath];
-
-    self.instance = [[NSImage alloc] initWithData:imageData];
 }
 
 - (void)tearDown
@@ -32,23 +26,31 @@
 
 - (void)testScaleToFitDown
 {
-    //40_50
-    NSSize testSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
-    NSSize testResults[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+
+    NSSize sourceSizes[] = {CGSizeMake(50, 80), CGSizeMake(100, 200), CGSizeMake(500, 500), CGSizeMake(40, 200)};
+    NSSize targetSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+
+    NSSize testResults[] = {CGSizeMake(18.75, 30), CGSizeMake(10, 20), CGSizeMake(50, 50), CGSizeMake(4, 20)};
+
     NSImage *resizedImage;
     int i;
-    for (i = 0; i < NELEMS(testSizes); i++)
+    for (i = 0; i < NELEMS(sourceSizes); i++)
     {
-        NSSize testSize = testSizes[i];
-        resizedImage = [self.instance imageScaledToFitSize:testSize];
+        NSSize sourceSize = sourceSizes[i];
+        NSSize targetSize = targetSizes[i];
+        NSSize resultSize = testResults[i];
+
+        self.instance = [[NSImage alloc] initWithSize:sourceSize];
+
+        resizedImage = [self.instance imageScaledToFitSize:targetSize];
         STAssertNotNil(resizedImage, @"should return a image object");
-        STAssertTrue([resizedImage size].width <= testSize.width, @"width should be smaller or equal than %d", testSize.width);
-        STAssertTrue([resizedImage size].height <= testSize.height, @"image height should be smaller or equal than %d", testSize.height);
+        STAssertEquals(resizedImage.size.width, resultSize.width, @"image width should be equal to %d", resultSize.width);
+        STAssertEquals(resizedImage.size.height, resultSize.height, @"image height should be equal to %d", resultSize.height);
     }
     resizedImage = nil;
 }
 
-- (void)testScaleToFitHeight
+- (void)_testScaleToFitHeight
 {
     NSSize testSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
     NSImage *resizedImage;
