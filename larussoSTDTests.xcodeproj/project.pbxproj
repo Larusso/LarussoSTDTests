@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C39E5256175B5201007E9DBD /* NSImageResizeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C39E5255175B5201007E9DBD /* NSImageResizeTest.m */; };
+		C39E5259175B5269007E9DBD /* image_40_50.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E5258175B5269007E9DBD /* image_40_50.png */; };
+		C39E525D175B535A007E9DBD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E525C175B535A007E9DBD /* SenTestingKit.framework */; };
+		C39E525F175B5365007E9DBD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E525E175B5365007E9DBD /* Cocoa.framework */; };
+		C39E5261175BA92D007E9DBD /* larussoSTD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E5260175BA92D007E9DBD /* larussoSTD.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C39E523C175B510F007E9DBD /* OSX Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39E523F175B510F007E9DBD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C39E5254175B5201007E9DBD /* NSImageResizeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImageResizeTest.h; sourceTree = SOURCE_ROOT; };
+		C39E5255175B5201007E9DBD /* NSImageResizeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSImageResizeTest.m; sourceTree = SOURCE_ROOT; };
+		C39E5258175B5269007E9DBD /* image_40_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_40_50.png; sourceTree = "<group>"; };
+		C39E525A175B529A007E9DBD /* LarussoCocoaSTDLib-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LarussoCocoaSTDLib-Info.plist"; path = "../LarussoCocoaSTDLib-Info.plist"; sourceTree = "<group>"; };
+		C39E525C175B535A007E9DBD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C39E525E175B5365007E9DBD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		C39E5260175BA92D007E9DBD /* larussoSTD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = larussoSTD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C39E5238175B510F007E9DBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39E5261175BA92D007E9DBD /* larussoSTD.dylib in Frameworks */,
+				C39E525F175B5365007E9DBD /* Cocoa.framework in Frameworks */,
+				C39E525D175B535A007E9DBD /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C39E5230175B504B007E9DBD = {
+			isa = PBXGroup;
+			children = (
+				C39E5257175B5269007E9DBD /* Resources */,
+				C39E5247175B510F007E9DBD /* Tests */,
+				C39E523E175B510F007E9DBD /* Frameworks */,
+				C39E523D175B510F007E9DBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C39E523D175B510F007E9DBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39E523C175B510F007E9DBD /* OSX Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C39E523E175B510F007E9DBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39E525C175B535A007E9DBD /* SenTestingKit.framework */,
+				C39E525E175B5365007E9DBD /* Cocoa.framework */,
+				C39E523F175B510F007E9DBD /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39E5247175B510F007E9DBD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C39E5254175B5201007E9DBD /* NSImageResizeTest.h */,
+				C39E5255175B5201007E9DBD /* NSImageResizeTest.m */,
+			);
+			name = Tests;
+			path = LarussoCocoaSTDLib;
+			sourceTree = "<group>";
+		};
+		C39E5257175B5269007E9DBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C39E525A175B529A007E9DBD /* LarussoCocoaSTDLib-Info.plist */,
+				C39E5260175BA92D007E9DBD /* larussoSTD.dylib */,
+				C39E5258175B5269007E9DBD /* image_40_50.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C39E523B175B510F007E9DBD /* OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39E5251175B510F007E9DBD /* Build configuration list for PBXNativeTarget "OSX Tests" */;
+			buildPhases = (
+				C39E5237175B510F007E9DBD /* Sources */,
+				C39E5238175B510F007E9DBD /* Frameworks */,
+				C39E5239175B510F007E9DBD /* Resources */,
+				C39E523A175B510F007E9DBD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSX Tests";
+			productName = LarussoCocoaSTDLib;
+			productReference = C39E523C175B510F007E9DBD /* OSX Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C39E5231175B504B007E9DBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C39E5234175B504B007E9DBD /* Build configuration list for PBXProject "larussoSTDTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C39E5230175B504B007E9DBD;
+			productRefGroup = C39E523D175B510F007E9DBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C39E523B175B510F007E9DBD /* OSX Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C39E5239175B510F007E9DBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39E5259175B5269007E9DBD /* image_40_50.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C39E523A175B510F007E9DBD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C39E5237175B510F007E9DBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39E5256175B5201007E9DBD /* NSImageResizeTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C39E5235175B504B007E9DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C39E5236175B504B007E9DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C39E5252175B510F007E9DBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "../LarussoSTD/LarussoSTD-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../LarussoSTD/**";
+				INFOPLIST_FILE = "LarussoCocoaSTDLib-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/larussoSTD/Build/Products/Debug\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C39E5253175B510F007E9DBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "../LarussoSTD/LarussoSTD-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../LarussoSTD/**";
+				INFOPLIST_FILE = "LarussoCocoaSTDLib-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/larussoSTD/Build/Products/Debug\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C39E5234175B504B007E9DBD /* Build configuration list for PBXProject "larussoSTDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39E5235175B504B007E9DBD /* Debug */,
+				C39E5236175B504B007E9DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39E5251175B510F007E9DBD /* Build configuration list for PBXNativeTarget "OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39E5252175B510F007E9DBD /* Debug */,
+				C39E5253175B510F007E9DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C39E5231175B504B007E9DBD /* Project object */;
+}
