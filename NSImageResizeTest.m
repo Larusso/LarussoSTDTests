@@ -50,20 +50,53 @@
     resizedImage = nil;
 }
 
-- (void)_testScaleToFitHeight
+- (void)testScaleToFitHeight
 {
-    NSSize testSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+    NSSize sourceSizes[] = {CGSizeMake(50, 80), CGSizeMake(100, 200), CGSizeMake(500, 500), CGSizeMake(40, 200)};
+    NSSize targetSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+    
+    NSSize testResults[] = {CGSizeMake(18.75, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(4, 20)};
+    
     NSImage *resizedImage;
     int i;
-    for (i = 0; i < NELEMS(testSizes); i++)
-    {
-        NSSize testSize = testSizes[i];
-        resizedImage = [self.instance imageScaledToFitHeight:testSize];
+    for (i = 0; i < NELEMS(sourceSizes); i++)
+    {        
+        NSSize sourceSize = sourceSizes[i];
+        NSSize targetSize = targetSizes[i];
+        NSSize resultSize = testResults[i];
+        
+        self.instance = [[NSImage alloc] initWithSize:sourceSize];
+        resizedImage = [self.instance imageScaledToFitHeight:targetSize];
         STAssertNotNil(resizedImage, @"should return a image object");
-        STAssertEquals(resizedImage.size.height, testSize.height, nil);
-        STAssertEquals(resizedImage.size.width, testSize.width, nil);
+        STAssertEquals(resizedImage.size.height, resultSize.height, nil);
+        STAssertEquals(resizedImage.size.width, resultSize.width, nil);
     }
     resizedImage = nil;
 }
+
+- (void)testScaleToFitWidth
+{
+    NSSize sourceSizes[] = {CGSizeMake(50, 80), CGSizeMake(100, 200), CGSizeMake(500, 500), CGSizeMake(40, 200)};
+    NSSize targetSizes[] = {CGSizeMake(20, 30), CGSizeMake(10, 80), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+    
+    NSSize testResults[] = {CGSizeMake(20, 30), CGSizeMake(10, 20), CGSizeMake(50, 50), CGSizeMake(40, 20)};
+    
+    NSImage *resizedImage;
+    int i;
+    for (i = 0; i < NELEMS(sourceSizes); i++)
+    {
+        NSSize sourceSize = sourceSizes[i];
+        NSSize targetSize = targetSizes[i];
+        NSSize resultSize = testResults[i];
+        
+        self.instance = [[NSImage alloc] initWithSize:sourceSize];
+        resizedImage = [self.instance imageScaledToFitWidth:targetSize];
+        STAssertNotNil(resizedImage, @"should return a image object");
+        STAssertEquals(resizedImage.size.height, resultSize.height, nil);
+        STAssertEquals(resizedImage.size.width, resultSize.width, nil);
+    }
+    resizedImage = nil;
+}
+
 
 @end
